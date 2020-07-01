@@ -1,6 +1,5 @@
-package me.sagiri.java.swing.login.LoginUi
+package me.sagiri.java.swing.login
 
-import sun.awt.image.ToolkitImage
 import java.awt.*
 import java.awt.event.ItemEvent
 import java.awt.event.WindowEvent
@@ -49,12 +48,14 @@ class LoginUi : JFrame {
         add(loginJButton)
         add(loginStatusJLabel)
 
-        title = "sagiri"
+        title = windowName
         iconImage = appIconImage
         setSize(800, 600)
         setVisible(true)
         layout = null
         minimumSize = Dimension(500, 500)
+        defaultCloseOperation = JFrame.EXIT_ON_CLOSE
+
 
         usernameJLabel.setBounds(20, 20, 50, 20)
         usernameJTextField.setBounds(80, 20, 200, 20)
@@ -67,7 +68,7 @@ class LoginUi : JFrame {
         // 点击登录按钮事件
         loginJButton.addActionListener {
             val username = usernameJTextField.text
-            val password = passwordJPasswordField.text
+            val password = String(passwordJPasswordField.password)
             if (username == password && username.length > 0 && password.length > 0) {
                 loginStatusJLabel.text = SUCCESS
             } else {

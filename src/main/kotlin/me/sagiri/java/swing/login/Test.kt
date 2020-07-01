@@ -1,5 +1,5 @@
-package me.sagiri.test
-import me.sagiri.java.swing.login.LoginUi.LoginUi
+package me.sagiri.kjava.swing.login
+import me.sagiri.java.swing.login.LoginUi
 import java.awt.event.ActionEvent
 
 fun main() {
