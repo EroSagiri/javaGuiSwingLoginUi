@@ -22,5 +22,5 @@ fun main() {
             // 额，找不到点击按钮事件的接口，直接调用这个事件
             mainWindow.loginJButton.actionListeners[0].actionPerformed(null)
         }
-    }).run()
+    }).start()
 }
